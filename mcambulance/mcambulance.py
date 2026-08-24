@@ -49,6 +49,10 @@ class MCAmbulance:
             self._decay = BtoD0lnu_ISGW2(kin_conf_dict[(bmeson, "d0", lepton)], ff_conf_dict["d0_isgw2"])
         elif channel == "d1p_dstar_pi_isgw2":
             self._decay = BtoD1plnu_ISGW2(kin_conf_dict[(bmeson, "d1p", lepton)], ff_conf_dict["d1p_isgw2"])
+        elif channel == "d0_dstar_pipi_isgw2":
+            self._decay = BtoD0lnu_ISGW2(kin_conf_dict[(bmeson, "d0", lepton, "dstar_pipi")], ff_conf_dict["d0_isgw2"])
+        elif channel == "d1p_d_pipi_isgw2":
+            self._decay = BtoD1plnu_ISGW2(kin_conf_dict[(bmeson, "d1p", lepton, "d_pipi")], ff_conf_dict["d1p_isgw2"])
         elif channel == "rho":
             print("Initializing the B+ -> rho mu nu code, this will generate warnings due to a singularity in the q2 spectrum present in the EvtGen module.")
             if lepton != "mu" or bmeson != "bp":
